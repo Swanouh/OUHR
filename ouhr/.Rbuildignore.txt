@@ -1,0 +1,7 @@
+.*.dll
+.git
+.git/.*
+.*.o$
+.*~$
+Makefile.gcc
+LICENSE
