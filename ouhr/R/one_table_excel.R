@@ -24,24 +24,24 @@ one_table_excel <- function(sheetname = "Sheet1", data, filename, password, colN
   openxlsx::addWorksheet(wb, sheetname)
 
   openxlsx::writeDataTable(wb,
-                 sheetname,
-                 data,
-                 colNames = colNames,
-                 startCol = table_position[1],
-                 startRow = table_position[2],
-                 tableStyle = "TableStyleLight9"
-  )
+                           sheetname,
+                           data,
+                           colNames = colNames,
+                           startCol = table_position[1],
+                           startRow = table_position[2],
+                           tableStyle = "TableStyleLight9"
+                           )
 
   openxlsx::setColWidths(wb,
-               sheetname,
-               cols = columns,
-               widths = column_widths
-  )
+                         sheetname,
+                         cols = columns,
+                         widths = column_widths
+                         )
 
   openxlsx::saveWorkbook(wb,
                          file = filename,
                          overwrite = TRUE
-  )
+                         )
 
   # Adding password if specified
   if(!missing(password)){

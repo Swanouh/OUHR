@@ -4,7 +4,7 @@
 \alias{save_excel}
 \title{Saving an Excel File}
 \usage{
-save_excel(wb = wb, filename, password)
+save_excel(wb, filename, password)
 }
 \arguments{
 \item{wb}{A string containing the current workbook. Default is "'wb'".}

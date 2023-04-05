@@ -20,7 +20,7 @@
 #' save_excel(wb = wb, filename = "C:/Users/Anya.Ferguson/Desktop/example.xlsx")
 #' }
 
-plot_excel <- function(wb = wb, sheetname, plot, plot_position = c(2, 1), plot_width = 8, plot_height = 5){
+plot_excel <- function(wb, sheetname, plot, plot_position = c(2, 1), plot_width = 8, plot_height = 5){
 
   if(!missing(plot)){
 

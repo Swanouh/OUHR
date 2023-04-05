@@ -15,7 +15,7 @@
 #' save_excel(wb = wb, filename = "C:/Users/Anya.Ferguson/Desktop/example.xlsx")
 #' }
 
-save_excel <- function(wb = wb, filename, password){
+save_excel <- function(wb, filename, password){
   openxlsx::saveWorkbook(wb,
                file = filename,
                overwrite = TRUE

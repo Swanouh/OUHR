@@ -78,6 +78,8 @@ email_info_request <- function(To, Cc, type, INF_Number = NULL, INF_Name = NULL,
     }
 
   if(type == "attachment"){
+    outMail[["subject"]] <- paste(INF_Number, "-", INF_Name)
+
     outMail[["HTMLBody"]] <- paste0('<p>',
                                     stringr::str_replace("Dear X,", "X", dear),
                                     '<p>',
@@ -98,6 +100,8 @@ email_info_request <- function(To, Cc, type, INF_Number = NULL, INF_Name = NULL,
     }
 
   if(type == "table"){
+    outMail[["subject"]] <- paste(INF_Number, "-", INF_Name)
+
     outMail[["HTMLBody"]] <- paste0('<p>',
                                     stringr::str_replace("Dear X,", "X", dear),
                                     '<p>',

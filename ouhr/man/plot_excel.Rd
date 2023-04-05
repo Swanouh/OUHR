@@ -5,7 +5,7 @@
 \title{Add Plot to Excel}
 \usage{
 plot_excel(
-  wb = wb,
+  wb,
   sheetname,
   plot,
   plot_position = c(2, 1),
