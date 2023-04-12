@@ -23,6 +23,8 @@ group_table_excel(
 
 \item{range}{The range of group values.}
 
+\item{colNames}{Boolean to say whether column names from the dataframe should be used. Defaults to \code{TRUE}.}
+
 \item{column_widths}{A vector of the desired column widths. Defaults to "\code{auto}".}
 
 \item{columns}{A vector of the column numbers to apply the specified widths too. Defaults to all columns.}

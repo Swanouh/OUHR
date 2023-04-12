@@ -6,9 +6,11 @@
 #' @param range The range of group values.
 #' @param column_widths A vector of the desired column widths. Defaults to "`auto`".
 #' @param columns A vector of the column numbers to apply the specified widths too. Defaults to all columns.
+#' @param colNames Boolean to say whether column names from the dataframe should be used. Defaults to `TRUE`.
 #'
 #' @return Inserts one sheet with data in a table for each group.
 #' @export
+#' @importFrom magrittr %>%
 #'
 #' @examples \dontrun{
 #' wb <- openxlsx::createWorkbook()

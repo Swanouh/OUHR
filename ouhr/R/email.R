@@ -13,6 +13,7 @@
 #'
 #' @return An email.
 #' @export
+#' @import RDCOMClient
 #'
 #' @examples \dontrun{
 #' email(To = "address1; address2;", subject = "test", body = "Para1. <p> Para2.")
