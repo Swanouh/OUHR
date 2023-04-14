@@ -8,7 +8,8 @@
 #' @param dear A string. Defaults to "`all`".
 #' @param body A string with paragraphs separated by "`<p>`".
 #' @param table A table defined in global environment.
-#' @param body2 A string with paragraphs separated by "`<p>`".
+#' @param body2 A string with paragraphs separated by "`<p>`".#'
+#' @param table2 A table defined in global environment.
 #' @param attachment A string containing filepath and name using `/` instead of `\`.
 #'
 #' @return An email.
@@ -19,7 +20,7 @@
 #' email(To = "address1; address2;", subject = "test", body = "Para1. <p> Para2.")
 #' }
 
-email <- function(To, Cc, subject, dear = "all", body, table, body2, attachment) {
+email <- function(To, Cc, subject, dear = "all", body, table, body2, table2, attachment) {
   # NB: Requires stringr, RDCOMClient
 
   # Creating an email
@@ -49,7 +50,7 @@ email <- function(To, Cc, subject, dear = "all", body, table, body2, attachment)
 
   # Email body
   # If body not specified, will be left blank. User should use <p> in their string to split into paragraphs.
-  if(!missing(body) & missing(table) & missing(body2)){
+  if(!missing(body) & missing(table) & missing(body2) & missing(table2)){
     outMail[["HTMLBody"]] <- paste0('<p>',
                                     stringr::str_replace("Dear X,", "X", dear),
                                     '</p>',
@@ -60,7 +61,7 @@ email <- function(To, Cc, subject, dear = "all", body, table, body2, attachment)
     )
   }
 
-  if(!missing(body) & !missing(table) & missing(body2)){
+  if(!missing(body) & !missing(table) & missing(body2) & missing(table2)){
     outMail[["HTMLBody"]] <- paste0('<p>',
                                     stringr::str_replace("Dear X,", "X", dear),
                                     '</p>',
@@ -73,7 +74,7 @@ email <- function(To, Cc, subject, dear = "all", body, table, body2, attachment)
     )
   }
 
-  if(!missing(body) & !missing(table) & !missing(body2)){
+  if(!missing(body) & !missing(table) & !missing(body2) & missing(table2)){
     outMail[["HTMLBody"]] <- paste0('<p>',
                                     stringr::str_replace("Dear X,", "X", dear),
                                     '</p>',
@@ -82,6 +83,23 @@ email <- function(To, Cc, subject, dear = "all", body, table, body2, attachment)
                                     table,
                                     '</p>',
                                     body2,
+                                    '</p>',
+                                    signature,
+                                    '</p>'
+    )
+  }
+
+  if(!missing(body) & !missing(table) & !missing(body2) & !missing(table2)){
+    outMail[["HTMLBody"]] <- paste0('<p>',
+                                    stringr::str_replace("Dear X,", "X", dear),
+                                    '</p>',
+                                    body,
+                                    '</p>',
+                                    table,
+                                    '</p>',
+                                    body2,
+                                    '</p>',
+                                    table2,
                                     '</p>',
                                     signature,
                                     '</p>'

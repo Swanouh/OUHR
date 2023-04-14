@@ -4,7 +4,7 @@
 \alias{email}
 \title{Creating an Email}
 \usage{
-email(To, Cc, subject, dear = "all", body, table, body2, attachment)
+email(To, Cc, subject, dear = "all", body, table, body2, table2, attachment)
 }
 \arguments{
 \item{To}{A string of email addresses separated by "\verb{;}".}
@@ -19,7 +19,9 @@ email(To, Cc, subject, dear = "all", body, table, body2, attachment)
 
 \item{table}{A table defined in global environment.}
 
-\item{body2}{A string with paragraphs separated by "\verb{<p>}".}
+\item{body2}{A string with paragraphs separated by "\verb{<p>}".#'}
+
+\item{table2}{A table defined in global environment.}
 
 \item{attachment}{A string containing filepath and name using \code{/} instead of \verb{\\}.}
 }
