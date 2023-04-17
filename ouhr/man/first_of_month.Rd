@@ -4,10 +4,10 @@
 \alias{first_of_month}
 \title{First of the Month}
 \usage{
-first_of_month(x)
+first_of_month(date)
 }
 \arguments{
-\item{x}{A date.}
+\item{date}{A date.}
 }
 \value{
 The first of the month in YYYY-MM-DD format.

@@ -1,4 +1,4 @@
-#' Title
+#' Add One Sheet and Table per Group to Excel.
 #'
 #' @param wb A string containing the current workbook.
 #' @param data A dataframe.

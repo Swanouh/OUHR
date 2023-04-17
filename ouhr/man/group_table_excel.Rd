@@ -2,7 +2,7 @@
 % Please edit documentation in R/group_table_excel.R
 \name{group_table_excel}
 \alias{group_table_excel}
-\title{Title}
+\title{Add One Sheet and Table per Group to Excel.}
 \usage{
 group_table_excel(
   wb,
@@ -33,7 +33,7 @@ group_table_excel(
 Inserts one sheet with data in a table for each group.
 }
 \description{
-Title
+Add One Sheet and Table per Group to Excel.
 }
 \examples{
 \dontrun{
