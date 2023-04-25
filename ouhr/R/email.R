@@ -74,6 +74,19 @@ email <- function(To, Cc, subject, dear = "all", body, table, body2, table2, att
     )
   }
 
+  if(!missing(body) & missing(table) & !missing(body2) & missing(table2)){
+    outMail[["HTMLBody"]] <- paste0('<p>',
+                                    stringr::str_replace("Dear X,", "X", dear),
+                                    '</p>',
+                                    body,
+                                    '</p>',
+                                    body2,
+                                    '</p>',
+                                    signature,
+                                    '</p>'
+    )
+  }
+
   if(!missing(body) & !missing(table) & !missing(body2) & missing(table2)){
     outMail[["HTMLBody"]] <- paste0('<p>',
                                     stringr::str_replace("Dear X,", "X", dear),
