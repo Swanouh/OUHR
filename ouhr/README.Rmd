@@ -1,0 +1,111 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# ouhr
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of ouhr is to provide useful functions for completing routine procedures. This includes various functions to manipulate dates, e.g., finding financial years or the first of the month, functions for sending emails and functions for creating Excel files.
+
+## Installation
+
+You can install the development version of ouhr like so:
+
+``` r
+devtools::install_github("AnyaJade/OUHR/ouhr")
+```
+
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+```{r example}
+library(ouhr)
+
+first_of_month(Sys.Date())
+```
+
+# Functions
+
+Below is a list of all the functions currently in ouhr and a summary of what they do.
+
+## Date Manipulations
+
+```{r financial year}
+# A function to find the financial year of a given date
+financial_year(Sys.Date())
+```
+
+```{r first of the month}
+# A function to find the first of the month of a given date
+first_of_month(Sys.Date())
+```
+
+```{r last sunday}
+# A function to find the date of the last Sunday before a given date
+last_sunday(Sys.Date())
+```
+
+```{r previous month}
+# A function to find the previous month of a given date
+previous_month(Sys.Date())
+```
+
+```{r month year}
+# A function to create a string of the month and year as "MM YYYY" of a given date
+monthyear(Sys.Date(), "abb")
+```
+
+```{r month zero}
+# A function to convert a month into "MM" format
+month_zero(Sys.Date())
+```
+
+## Email
+
+```{r email}
+# A function to create an email
+email(To = "anya.ferguson@ouh.nhs.uk; EDandSupportServicesInformationTeam@oxnet.nhs.uk",
+      Cc = "example@ouh.nhs.uk",
+      subject = "Testing email function from OUHR package",
+      body = "Testing the email function from OUHR package. <p> Please ignore this email."
+      )
+```
+
+```{r email with table}
+library(tidyverse)
+library(kableExtra)
+
+# Can also add a table to an email body, or an attachment
+cars_table <- cars %>% 
+  kable(booktabs = TRUE) %>% 
+  kable_styling(full_width = F)
+
+email(To = "anya.ferguson@ouh.nhs.uk; EDandSupportServicesInformationTeam@oxnet.nhs.uk",
+      body = "Testing the email function from OUHR package.",
+      table = cars_table,
+      body2 = "The table above shows the cars dataset."
+      )
+```
+
+```{r email for information requests}
+# A function to create 1 of 4 emails specifically for information requests
+email_info_request(type = "password",
+                   To = "anya.ferguson@ouh.nhs.uk ",
+                   dear = "Anya",
+                   password = "test"
+                   )
+```
