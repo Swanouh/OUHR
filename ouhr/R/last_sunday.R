@@ -7,5 +7,5 @@
 #'
 #' @examples last_sunday(Sys.Date())
 last_sunday <- function(date){
-  lubridate::floor_date(date)
+  lubridate::floor_date(date, "week")
   }
