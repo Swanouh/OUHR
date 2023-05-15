@@ -2,6 +2,7 @@
 
 export(email)
 export(email_info_request)
+export(financial_month)
 export(financial_year)
 export(first_of_month)
 export(group_table_excel)
