@@ -1,0 +1,24 @@
+Package: ouhr
+Title: Useful Functions for OUH
+Version: 0.0.0.9000
+Authors@R: 
+    person("Anya", "Ferguson", , "anya.ferguson@ouh.nhs.uk", role = c("aut", "cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: Contains useful packages for sending emails and creating
+    excel files to complete routines and information requests.
+License: MIT + file LICENSE
+Depends: 
+    RDCOMClient
+Imports: 
+    dplyr,
+    lubridate,
+    magrittr,
+    openxlsx,
+    stringi,
+    stringr
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3

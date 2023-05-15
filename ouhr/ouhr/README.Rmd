@@ -1,0 +1,179 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# ouhr
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of ouhr is to provide useful functions for completing routine procedures. This includes various functions to manipulate dates, e.g., finding financial years or the first of the month, functions for sending emails and functions for creating Excel files.
+
+## Installation
+
+You can install the development version of ouhr like so:
+
+``` r
+devtools::install_github("AnyaJade/OUHR/ouhr")
+```
+
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+```{r example}
+library(ouhr)
+
+first_of_month(as.Date("2023-03-28"))
+```
+
+# Functions
+
+Below is a list of all the functions currently in ouhr and a summary of what they do.
+
+## Date Manipulations
+
+```{r financial year}
+# A function to find the financial year of a given date
+financial_year(as.Date("2023-03-28"))
+```
+
+```{r first of the month}
+# A function to find the first of the month of a given date
+first_of_month(as.Date("2023-03-28"))
+```
+
+```{r last sunday}
+# A function to find the date of the last Sunday before a given date
+last_sunday(as.Date("2023-03-28"))
+```
+
+```{r previous month}
+# A function to find the previous month of a given date
+previous_month(as.Date("2023-03-28"))
+```
+
+```{r month year}
+# A function to create a string of the month and year where month can be either the full name, abbreviated or a number in MM format
+monthyear(as.Date("2023-03-28"), "abb")
+monthyear(as.Date("2023-03-28"), "full")
+monthyear(as.Date("2023-03-28"), "num")
+```
+
+```{r month zero}
+# A function to convert a month into "MM" format
+month_zero(as.Date("2023-03-28"))
+```
+
+## Email
+
+```{r email}
+# A function to create an email
+email(To = "anya.ferguson@ouh.nhs.uk; EDandSupportServicesInformationTeam@oxnet.nhs.uk",
+      Cc = "example@ouh.nhs.uk",
+      subject = "Testing email function from OUHR package",
+      body = "Testing the email function from OUHR package. <p> Please ignore this email."
+      )
+```
+
+```{r email with table}
+library(tidyverse)
+library(kableExtra)
+
+# Can also add a table to an email body, or an attachment
+cars_table <- cars %>% 
+  kable(booktabs = TRUE) %>% 
+  kable_styling(full_width = F)
+
+email(To = "anya.ferguson@ouh.nhs.uk; EDandSupportServicesInformationTeam@oxnet.nhs.uk",
+      body = "Testing the email function from OUHR package.",
+      table = cars_table,
+      body2 = "The table above shows the cars dataset."
+      )
+```
+
+```{r email for information requests}
+# A function to create 1 of 4 emails specifically for information requests
+email_info_request(type = "password",
+                   To = "anya.ferguson@ouh.nhs.uk ",
+                   dear = "Anya",
+                   password = "test"
+                   )
+```
+
+## Excel
+```{r saving excel}
+# A function to save excel, with option to add a password
+wb <- openxlsx::createWorkbook()
+
+openxlsx::addWorksheet(wb, "example")
+
+save_excel(wb = wb, 
+           filename = "C:/examplewithpassword.xlsx", 
+           password = "test"
+           )
+```
+
+```{r plot in excel}
+# A function to add a plot to excel
+plot1 <- plot(cars)
+
+wb1 <- openxlsx::createWorkbook()
+
+openxlsx::addWorksheet(wb1, "example")
+
+plot_excel(wb = wb1,
+           sheetname = "example", 
+           plot = plot1,
+           plot_position = c(5, 3),
+           plot_width = 10
+           )
+
+save_excel(wb = wb1, 
+           filename = "C:/exampleplot.xlsx"
+           )
+```
+
+```{r one table only in excel}
+# A function to create an excel file with data saved in only one table in only one sheet
+one_table_excel(sheetname = "data", 
+                data = cars, 
+                filename = "C:/exampletable.xlsx", 
+                column_widths = c(5, 8), 
+                columns = c(1, 2)
+                )
+```
+
+```{r one table per group in excel}
+# A function to add one sheet per group in an excel sheet, each with one table. 
+wb <- openxlsx::createWorkbook()
+
+data <- cars %>% mutate("speed_category" = ifelse(speed <15, "Less than 15", "Greater than 15"))
+
+group_table_excel(wb = wb1, data = data, group = speed_category, range = c("Less than 15", "Greater than 15"))
+
+save_excel(wb = wb, 
+           filename = "C:/examplegroup.xlsx"
+           )
+```
+
+## Other
+```{r random password}
+# A function to create a string of upper/lower case letters and numbers of a desired length, with option to specify a seed.
+random_password(seed = 1, length = 4)
+```
+
+
+
+
