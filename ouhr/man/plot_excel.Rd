@@ -38,6 +38,6 @@ plot1 <- plot(cars)
 wb <- openxlsx::createWorkbook()
 openxlsx::addWorksheet(wb, "example")
 plot_excel(sheetname = "example", plot = plot1)
-save_excel(wb = wb, filename = "C:/Users/Anya.Ferguson/Desktop/example.xlsx")
+save_excel(wb = wb, filename = "C:/example.xlsx")
 }
 }

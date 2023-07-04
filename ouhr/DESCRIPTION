@@ -14,6 +14,7 @@ Imports:
     lubridate,
     magrittr,
     openxlsx,
+    readxl,
     stringi,
     stringr
 Encoding: UTF-8
