@@ -39,6 +39,7 @@ An Excel workbook with one table saved with filename and password provided.
 Creating an Excel workbook with only one table and saving in desired location with desired filename. Option to add a password.
 }
 \examples{
-one_table_excel(data = cars, filename = "C:/example.xlsx", column_widths = c(5, 8), columns = c(1, 2))
+one_table_excel(data = cars, filename = "C:/example.xlsx",
+   column_widths = c(5, 8), columns = c(1, 2))
 
 }

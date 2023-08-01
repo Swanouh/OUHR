@@ -17,7 +17,7 @@
 #' wb <- openxlsx::createWorkbook()
 #' openxlsx::addWorksheet(wb, "example")
 #' plot_excel(sheetname = "example", plot = plot1)
-#' save_excel(wb = wb, filename = "C:/Users/Anya.Ferguson/Desktop/example.xlsx")
+#' save_excel(wb = wb, filename = "C:/example.xlsx")
 #' }
 
 plot_excel <- function(wb, sheetname, plot, plot_position = c(2, 1), plot_width = 8, plot_height = 5){

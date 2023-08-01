@@ -15,7 +15,8 @@
 #' @export
 #'
 #' @examples
-#' one_table_excel(data = cars, filename = "C:/example.xlsx", column_widths = c(5, 8), columns = c(1, 2))
+#' one_table_excel(data = cars, filename = "C:/example.xlsx",
+#'    column_widths = c(5, 8), columns = c(1, 2))
 #'
 
 one_table_excel <- function(sheetname = "Sheet1", data, filename, password, colNames = TRUE, table_position = c(1, 1), column_widths = "auto", columns = 1:ncol(data)){

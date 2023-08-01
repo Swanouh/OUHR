@@ -39,7 +39,8 @@ Add One Sheet and Table per Group to Excel.
 \dontrun{
 wb <- openxlsx::createWorkbook()
 data <- cars \%>\% mutate("speed_category" = ifelse(speed <15, "Less than 15", "Greater than 15"))
-group_table_excel(wb = wb, data = data, group = speed_category, range = c("Less than 15", "Greater than 15"))
+group_table_excel(wb = wb, data = data, group = speed_category,
+   range = c("Less than 15", "Greater than 15"))
 save_excel(wb = wb, filename = "C:/Users/Anya.Ferguson/Desktop/example.xlsx")
 }
 }
