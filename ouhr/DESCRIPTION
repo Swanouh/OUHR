@@ -10,9 +10,11 @@ License: MIT + file LICENSE
 Depends: 
     RDCOMClient
 Imports: 
+    DBI,
     dplyr,
     lubridate,
     magrittr,
+    odbc,
     openxlsx,
     readxl,
     stringi,
