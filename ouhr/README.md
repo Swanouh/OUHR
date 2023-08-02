@@ -17,6 +17,8 @@ You can install the development version of ouhr like so:
 
 ``` r
 devtools::install_github("AnyaJade/OUHR/ouhr")
+#> Skipping install of 'ouhr' from a github remote, the SHA1 (fba40119) has not changed since last install.
+#>   Use `force = TRUE` to force installation
 ```
 
 ## Example
@@ -53,7 +55,7 @@ first_of_month(as.Date("2023-03-28"))
 ``` r
 # A function to find the date of the last Sunday before a given date
 last_sunday(as.Date("2023-03-28"))
-#> [1] "2023-03-28 UTC"
+#> [1] "2023-03-26"
 ```
 
 ``` r
@@ -202,10 +204,37 @@ save_excel(wb = wb,
 #> Warning: Workbook does not contain any worksheets. A worksheet will be added.
 ```
 
+``` r
+# A function to delete all data from a start row and start col to end of excel sheet
+one_table_excel(data = cars, filename = "C:/example.xlsx")
+
+wb <- openxlsx::loadWorkbook("C:/example.xlsx")
+
+delete_all_excel(template = "C:/example.xlsx", wb = wb, sheet = "Sheet1", row_start = 5)
+
+save_excel(wb = wb, filename = "C:/example.xlsx")
+```
+
 ## Other
 
 ``` r
 # A function to create a string of upper/lower case letters and numbers of a desired length, with option to specify a seed.
 random_password(seed = 1, length = 4)
 #> [1] "GNZu"
+```
+
+``` r
+# A function to create a base SQL query that searches columns CATALOG_CD_DISPLAY, ORDER_MNEMONIC and ORDERED_AS_MNEMONIC in TDWH_ORH.WareHouse.ODS.d_PrescriptionOrders for all provided drugs in a specified date range
+prescriptions(drugs = c("Berinert", "Cinryze", "Orladeyo"), 
+              startdate = "2023-06-01", 
+              enddate = "2023-06-30"
+              )
+#> [1] "SELECT * FROM TDWH_ORH.WareHouse.ODS.d_PrescriptionOrders AS PO WHERE PO.OrderPlacedDateTime BETWEEN '2023-06-01' AND '2023-06-30' AND (PO.CATALOG_CD_DISPLAY LIKE '%Berinert%' OR PO.ORDER_MNEMONIC LIKE '%Berinert%' OR PO.ORDERED_AS_MNEMONIC LIKE '%Berinert%' OR PO.CATALOG_CD_DISPLAY LIKE '%Cinryze%' OR PO.ORDER_MNEMONIC LIKE '%Cinryze%' OR PO.ORDERED_AS_MNEMONIC LIKE '%Cinryze%' OR PO.CATALOG_CD_DISPLAY LIKE '%Orladeyo%' OR PO.ORDER_MNEMONIC LIKE '%Orladeyo%' OR PO.ORDERED_AS_MNEMONIC LIKE '%Orladeyo%')"
+```
+
+``` r
+# A function to read .sql files into R. 
+filename <- "C:/SVN/R/Testing read_sql function.sql"
+read_sql(filename)
+#> [1] " /* Adding in a comment to test that the read_sql function doesn't comment out the rest of this test script */ SELECT TOP 10 *  FROM DataMarts.APC.APCSpell  /* Adding in a comment to test that the read_sql function doesn't comment out the rest of this test script */ WHERE CAST(DischargeDateTime AS DATE) = '2023-07-31'"
 ```

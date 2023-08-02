@@ -24,7 +24,7 @@ The goal of ouhr is to provide useful functions for completing routine procedure
 
 You can install the development version of ouhr like so:
 
-``` r
+``` {r installing OUHR}
 devtools::install_github("AnyaJade/OUHR/ouhr")
 ```
 
@@ -168,12 +168,37 @@ save_excel(wb = wb,
            )
 ```
 
+```{r deleting data from excel}
+# A function to delete all data from a start row and start col to end of excel sheet
+one_table_excel(data = cars, filename = "C:/example.xlsx")
+
+wb <- openxlsx::loadWorkbook("C:/example.xlsx")
+
+delete_all_excel(template = "C:/example.xlsx", wb = wb, sheet = "Sheet1", row_start = 5)
+
+save_excel(wb = wb, filename = "C:/example.xlsx")
+```
+
+
 ## Other
 ```{r random password}
 # A function to create a string of upper/lower case letters and numbers of a desired length, with option to specify a seed.
 random_password(seed = 1, length = 4)
 ```
 
+```{r prescriptions}
+# A function to create a base SQL query that searches columns CATALOG_CD_DISPLAY, ORDER_MNEMONIC and ORDERED_AS_MNEMONIC in TDWH_ORH.WareHouse.ODS.d_PrescriptionOrders for all provided drugs in a specified date range
+prescriptions(drugs = c("Berinert", "Cinryze", "Orladeyo"), 
+              startdate = "2023-06-01", 
+              enddate = "2023-06-30"
+              )
+```
+
+```{r reading in .sql files}
+# A function to read .sql files into R. 
+filename <- "C:/SVN/R/Testing read_sql function.sql"
+read_sql(filename)
+```
 
 
 
