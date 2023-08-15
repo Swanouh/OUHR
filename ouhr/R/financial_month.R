@@ -20,5 +20,5 @@ financial_month <- function(date){
     fin_month <- month - 3
   }
 
-  print(as.character(fin_month))
+  as.character(fin_month)
 }
