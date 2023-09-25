@@ -1,6 +1,6 @@
 Package: ouhr
 Title: Useful Functions for OUH
-Version: 0.0.0.9000
+Version: 0.1.0
 Authors@R: 
     person("Anya", "Ferguson", , "anya.ferguson@ouh.nhs.uk", role = c("aut", "cre"),
            comment = c(ORCID = "YOUR-ORCID-ID"))
@@ -12,11 +12,13 @@ Depends:
 Imports: 
     DBI,
     dplyr,
+    hms,
     lubridate,
     magrittr,
     odbc,
     openxlsx,
     readxl,
+    rmarkdown,
     stringi,
     stringr
 Encoding: UTF-8
