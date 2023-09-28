@@ -20,8 +20,20 @@ wrap_up <- function(){
 
   title <- rmarkdown::metadata$title
 
-  log <- data.frame("StartDateTime" = as.character(procedure_start_time),
-                    "EndDateTime" = as.character(procedure_end_time),
+  log <- data.frame("StartDateTime" = as.character(
+                                                    hms::round_hms(
+                                                      as.POSIXct(
+                                                        procedure_start_time
+                                                                ), 1
+                                                                   )
+                                                    ),
+                    "EndDateTime" = as.character(
+                      hms::round_hms(
+                        as.POSIXct(
+                          procedure_end_time
+                        ), 1
+                      )
+                    ),
                     "RScriptName" = title
   )
 
