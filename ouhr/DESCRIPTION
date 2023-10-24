@@ -1,6 +1,6 @@
 Package: ouhr
 Title: Useful Functions for OUH
-Version: 0.1.1
+Version: 0.2.0
 Authors@R: 
     person("Anya", "Ferguson", , "anya.ferguson@ouh.nhs.uk", role = c("aut", "cre"),
            comment = c(ORCID = "YOUR-ORCID-ID"))

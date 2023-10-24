@@ -8,7 +8,7 @@
 #' @param dear A string. Defaults to "`all`".
 #' @param body A string with paragraphs separated by "`<p>`".
 #' @param table A table defined in global environment.
-#' @param body2 A string with paragraphs separated by "`<p>`".#'
+#' @param body2 A string with paragraphs separated by "`<p>`".
 #' @param table2 A table defined in global environment.
 #' @param attachment A string containing filepath and name using `/` instead of `\`.
 #'

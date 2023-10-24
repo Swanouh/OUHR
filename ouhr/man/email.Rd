@@ -19,7 +19,7 @@ email(To, Cc, subject, dear = "all", body, table, body2, table2, attachment)
 
 \item{table}{A table defined in global environment.}
 
-\item{body2}{A string with paragraphs separated by "\verb{<p>}".#'}
+\item{body2}{A string with paragraphs separated by "\verb{<p>}".}
 
 \item{table2}{A table defined in global environment.}
 

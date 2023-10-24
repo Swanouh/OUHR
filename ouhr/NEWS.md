@@ -1,3 +1,5 @@
+# ouhr 0.2.0
+
 # ouhr 0.1.1
 * Adding round_hms to wrap_up() so fractions are not included in timestamps.
 
