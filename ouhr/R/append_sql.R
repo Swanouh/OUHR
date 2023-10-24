@@ -16,12 +16,12 @@
 #'                                Driver = "SQL Server",
 #'                                Server = "oxnetorbit01\\tdwh_live",
 #'                                Database = "Info"
-#')
+#'                               )
 #'append_sql(data = data,
 #'           sql_table = sql_table,
 #'           connection = connection_WH,
 #'           missing_columns = TRUE
-#')
+#'           )
 #'}
 
 
@@ -37,7 +37,7 @@ append_sql <- function(data, sql_table, connection, chunksize = 100) {
                                    collapse = '], ['
                             ),
                             "]) VALUES "
-  )
+                            )
 
   for (i in 1:ceiling(rows / chunksize)) {
 
@@ -58,11 +58,12 @@ append_sql <- function(data, sql_table, connection, chunksize = 100) {
 
     # put together query beginning and rows to get full query
     query_full <- stringr::str_replace_all(paste0(query_beginning,
-                                         paste0(values, collapse = ",")
-    ),
-    "'NA'",
-    "NULL"
-    )
+                                         paste0(values, collapse = ","
+                                                )
+                                         ),
+                                         "'NA'",
+                                         "NULL"
+                                         )
 
     # sending query to sql
     DBI::dbSendStatement(connection, statement = query_full)

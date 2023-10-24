@@ -23,11 +23,14 @@ group_table_excel(
 
 \item{range}{The range of group values.}
 
-\item{colNames}{Boolean to say whether column names from the dataframe should be used. Defaults to \code{TRUE}.}
+\item{colNames}{Boolean to say whether column names from the dataframe should
+be used. Defaults to \code{TRUE}.}
 
-\item{column_widths}{A vector of the desired column widths. Defaults to "\code{auto}".}
+\item{column_widths}{A vector of the desired column widths. Defaults to
+"\code{auto}".}
 
-\item{columns}{A vector of the column numbers to apply the specified widths too. Defaults to all columns.}
+\item{columns}{A vector of the column numbers to apply the specified widths
+too. Defaults to all columns.}
 }
 \value{
 Inserts one sheet with data in a table for each group.
@@ -38,7 +41,8 @@ Add One Sheet and Table per Group to Excel.
 \examples{
 \dontrun{
 wb <- openxlsx::createWorkbook()
-data <- cars \%>\% mutate("speed_category" = ifelse(speed <15, "Less than 15", "Greater than 15"))
+data <- cars \%>\% mutate("speed_category" = ifelse(speed <15, "Less than 15",
+"Greater than 15"))
 group_table_excel(wb = wb, data = data, group = speed_category,
    range = c("Less than 15", "Greater than 15"))
 save_excel(wb = wb, filename = "C:/Users/Anya.Ferguson/Desktop/example.xlsx")

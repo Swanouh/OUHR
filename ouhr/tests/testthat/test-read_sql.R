@@ -4,7 +4,7 @@ test_that("read_sql works", {
 
   connection_OP <- DBI::dbConnect(odbc::odbc(),
                                   Driver = "SQL Server",
-                                  Server = "Oxnetorbit02\\ORBITPlus", # NB: the extra \
+                                  Server = "Oxnetorbit02\\ORBITPlus",
                                   Database = "DataMarts"
                                   )
 

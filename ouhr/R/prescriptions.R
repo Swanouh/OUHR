@@ -1,12 +1,16 @@
 #' Prescriptions SQL Query
 #'
-#' To create a base for a prescriptions SQL query that searches columns CATALOG_CD_DISPLAY, ORDER_MNEMONIC and ORDERED_AS_MNEMONIC in TDWH_ORH.WareHouse.ODS.d_PrescriptionOrders for all provided drugs in a specified date range. This query can then be amended before use.
+#' To create a base for a prescriptions SQL query that searches columns
+#' CATALOG_CD_DISPLAY, ORDER_MNEMONIC and ORDERED_AS_MNEMONIC in
+#' TDWH_ORH.WareHouse.ODS.d_PrescriptionOrders for all provided drugs in a
+#' specified date range. This query can then be amended before use.
 #'
 #' @param drugs A vector of the drugs you want to search for.
 #' @param startdate A start date for the search.
 #' @param enddate An end date for the search.
 #'
-#' @return A string containing a SQL query to look for the drugs provided within the specified date range.
+#' @return A string containing a SQL query to look for the drugs provided within
+#'  the specified date range.
 #' @export
 #'
 #' @examples

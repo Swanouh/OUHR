@@ -10,7 +10,8 @@ wrap_up()
 Run-time of Rmd.
 }
 \description{
-A function to print the run-time of the Rmd to the html output and to log start and end datetimes to Info.Adhoc.R_Procedures.
+A function to print the run-time of the Rmd to the html output and to log
+start and end datetimes to Info.Adhoc.R_Procedures.
 }
 \examples{
 \dontrun{procedure_start_time <- Sys.Date()

@@ -9,15 +9,18 @@ save_excel(wb, filename, password)
 \arguments{
 \item{wb}{A string containing the current workbook. Default is "'wb'".}
 
-\item{filename}{A string containing desired filepath and name using \code{/} instead of \verb{\\}.}
+\item{filename}{A string containing desired filepath and name using \code{/}
+instead of \verb{\\}.}
 
-\item{password}{A string containing desired password. If omitted, no password is assigned.}
+\item{password}{A string containing desired password. If omitted, no password
+is assigned.}
 }
 \value{
 Workbook will be saved with filename and password provided.
 }
 \description{
-Saves workbook as Excel file in desired location with desired filename. Option to add a password.
+Saves workbook as Excel file in desired location with desired filename.
+Option to add a password.
 }
 \examples{
 \dontrun{

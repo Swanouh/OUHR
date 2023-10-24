@@ -23,7 +23,8 @@ email(To, Cc, subject, dear = "all", body, table, body2, table2, attachment)
 
 \item{table2}{A table defined in global environment.}
 
-\item{attachment}{A string containing filepath and name using \code{/} instead of \verb{\\}.}
+\item{attachment}{A string containing filepath and name using \code{/} instead of
+\verb{\\}.}
 }
 \value{
 An email.
@@ -33,6 +34,7 @@ Creating an email based on inputs provided. Option to add an attachment.
 }
 \examples{
 \dontrun{
-email(To = "address1; address2;", subject = "test", body = "Para1. <p> Para2.")
+email(To = "address1; address2;", subject = "test",
+body = "Para1. <p> Para2.")
 }
 }

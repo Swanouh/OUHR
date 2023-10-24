@@ -7,12 +7,14 @@
 random_password(seed = as.character(as.numeric(Sys.time())), length = 6)
 }
 \arguments{
-\item{seed}{Either a number to get the same password each time or a string of "INF-ABCDE" where ABCDE are numbers. Default uses current timestamp.}
+\item{seed}{Either a number to get the same password each time or a string of
+"INF-ABCDE" where ABCDE are numbers. Default uses current timestamp.}
 
 \item{length}{The number of characters in the password. Default is 6.}
 }
 \value{
-A string of length specified of uppercase letters, lowercase letters and numbers.
+A string of length specified of uppercase letters, lowercase letters
+and numbers.
 }
 \description{
 Random Password Generation

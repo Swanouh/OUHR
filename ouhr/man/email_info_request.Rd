@@ -21,7 +21,8 @@ email_info_request(
 
 \item{Cc}{A string of email addresses separated by "\verb{;}".}
 
-\item{type}{Either "\code{link}", "\code{password}", "\code{attachment}" or "\code{table}" to determine email contents.}
+\item{type}{Either "\code{link}", "\code{password}", "\code{attachment}" or "\code{table}" to
+determine email contents.}
 
 \item{INF_Number}{A string.}
 
@@ -31,7 +32,8 @@ email_info_request(
 
 \item{password}{A string.}
 
-\item{filename}{A string containing filepath and name of attachment using \code{/} instead of \verb{\\}.}
+\item{filename}{A string containing filepath and name of attachment using
+\code{/} instead of \verb{\\}.}
 
 \item{table}{A table defined in global environment.}
 }
@@ -39,7 +41,8 @@ email_info_request(
 One of two emails, depending on type specified.
 }
 \description{
-Depending on the type specified, creates an email to send link to data or password to the requester.
+Depending on the type specified, creates an email to send link to data or
+password to the requester.
 }
 \examples{
  \dontrun{email_info_request(type = "password",

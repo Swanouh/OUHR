@@ -13,22 +13,26 @@ delete_all_excel(template, wb, sheet, col_start = 1, row_start = 1)
 
 \item{sheet}{A string containing the sheetname.}
 
-\item{col_start}{A number for the column to start deleting from. Default is 1.}
+\item{col_start}{A number for the column to start deleting from. Default is
+1.}
 
 \item{row_start}{A number for the row to start deleting from. Default is 1.}
 }
 \value{
-Deletes all the data from the starting row/column specified of the Excel sheet.
+Deletes all the data from the starting row/column specified of the
+Excel sheet.
 }
 \description{
-Delete existing data from an Excel sheet. Can specify the start column and start row.
+Delete existing data from an Excel sheet. Can specify the start column and
+start row.
 }
 \examples{
 \dontrun{
 one_table_excel(data = cars, filename = "C:/example.xlsx")
 
 wb <- openxlsx::loadWorkbook("C:/example.xlsx")#'
-delete_all_excel(template = "C:/example.xlsx", wb = wb, sheet = "Sheet1", row_start = 5)
+delete_all_excel(template = "C:/example.xlsx", wb = wb, sheet = "Sheet1",
+row_start = 5)
 save_excel(wb = wb, filename = "C:/example.xlsx")
 }
 }

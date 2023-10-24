@@ -1,10 +1,13 @@
 #' Saving an Excel File
 #'
-#' Saves workbook as Excel file in desired location with desired filename. Option to add a password.
+#' Saves workbook as Excel file in desired location with desired filename.
+#' Option to add a password.
 #'
 #' @param wb A string containing the current workbook. Default is "'wb'".
-#' @param filename A string containing desired filepath and name using `/` instead of `\`.
-#' @param password A string containing desired password. If omitted, no password is assigned.
+#' @param filename A string containing desired filepath and name using `/`
+#' instead of `\`.
+#' @param password A string containing desired password. If omitted, no password
+#'  is assigned.
 #'
 #' @return Workbook will be saved with filename and password provided.
 #' @export

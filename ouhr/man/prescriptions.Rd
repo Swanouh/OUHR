@@ -14,10 +14,14 @@ prescriptions(drugs, startdate, enddate)
 \item{enddate}{An end date for the search.}
 }
 \value{
-A string containing a SQL query to look for the drugs provided within the specified date range.
+A string containing a SQL query to look for the drugs provided within
+the specified date range.
 }
 \description{
-To create a base for a prescriptions SQL query that searches columns CATALOG_CD_DISPLAY, ORDER_MNEMONIC and ORDERED_AS_MNEMONIC in TDWH_ORH.WareHouse.ODS.d_PrescriptionOrders for all provided drugs in a specified date range. This query can then be amended before use.
+To create a base for a prescriptions SQL query that searches columns
+CATALOG_CD_DISPLAY, ORDER_MNEMONIC and ORDERED_AS_MNEMONIC in
+TDWH_ORH.WareHouse.ODS.d_PrescriptionOrders for all provided drugs in a
+specified date range. This query can then be amended before use.
 }
 \examples{
 drugs <- c("Berinert", "Cinryze", "Orladeyo")

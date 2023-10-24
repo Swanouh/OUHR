@@ -9,7 +9,8 @@ monthyear(date, type)
 \arguments{
 \item{date}{A date.}
 
-\item{type}{Either "\code{abb}", "\code{full}" or "\code{num}" to determine how month should appear.}
+\item{type}{Either "\code{abb}", "\code{full}" or "\code{num}" to determine how month should
+appear.}
 }
 \value{
 A string of the month and year of a date.

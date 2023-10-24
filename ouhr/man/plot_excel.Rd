@@ -20,7 +20,8 @@ plot_excel(
 
 \item{plot}{A plot.}
 
-\item{plot_position}{A vector of coordinates of starting column and starting row. Defaults to column \code{2}, row \code{1}.}
+\item{plot_position}{A vector of coordinates of starting column and starting
+row. Defaults to column \code{2}, row \code{1}.}
 
 \item{plot_width}{A number for the desired width of plot. Defaults to \code{8}.}
 
@@ -30,7 +31,8 @@ plot_excel(
 Inserts the plot into the Excel workbook.
 }
 \description{
-Adding a R plot to Excel workbook. Plot can be made using \code{ggplot} or base \code{R}. Ensure plot exists in the global environment before using the function.
+Adding a R plot to Excel workbook. Plot can be made using \code{ggplot} or base
+\code{R}. Ensure plot exists in the global environment before using the function.
 }
 \examples{
 \dontrun{

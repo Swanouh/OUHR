@@ -1,7 +1,8 @@
 #' Getting the Month and Year of a Date
 #'
 #' @param date A date.
-#' @param type Either "`abb`", "`full`" or "`num`" to determine how month should appear.
+#' @param type Either "`abb`", "`full`" or "`num`" to determine how month should
+#'  appear.
 #'
 #' @return A string of the month and year of a date.
 #' @export

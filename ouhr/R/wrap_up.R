@@ -1,6 +1,7 @@
 #' Wrap up
 #'
-#' A function to print the run-time of the Rmd to the html output and to log start and end datetimes to Info.Adhoc.R_Procedures.
+#' A function to print the run-time of the Rmd to the html output and to log
+#' start and end datetimes to Info.Adhoc.R_Procedures.
 #'
 #' @return Run-time of Rmd.
 #' @export
@@ -43,7 +44,8 @@ wrap_up <- function(){
   )
 
   paste("Runtime:",
-        hms::round_hms(hms::as_hms(difftime(procedure_end_time, procedure_start_time)), 1)
+        hms::round_hms(hms::as_hms(difftime(procedure_end_time,
+                                            procedure_start_time)), 1)
   )
 
 }

@@ -28,11 +28,11 @@ connection_WH <- DBI::dbConnect(odbc::odbc(),
                                Driver = "SQL Server",
                                Server = "oxnetorbit01\\\\tdwh_live",
                                Database = "Info"
-)
+                              )
 append_sql(data = data,
           sql_table = sql_table,
           connection = connection_WH,
           missing_columns = TRUE
-)
+          )
 }
 }

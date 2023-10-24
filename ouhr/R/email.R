@@ -10,17 +10,20 @@
 #' @param table A table defined in global environment.
 #' @param body2 A string with paragraphs separated by "`<p>`".
 #' @param table2 A table defined in global environment.
-#' @param attachment A string containing filepath and name using `/` instead of `\`.
+#' @param attachment A string containing filepath and name using `/` instead of
+#' `\`.
 #'
 #' @return An email.
 #' @export
 #' @import RDCOMClient
 #'
 #' @examples \dontrun{
-#' email(To = "address1; address2;", subject = "test", body = "Para1. <p> Para2.")
+#' email(To = "address1; address2;", subject = "test",
+#' body = "Para1. <p> Para2.")
 #' }
 
-email <- function(To, Cc, subject, dear = "all", body, table, body2, table2, attachment) {
+email <- function(To, Cc, subject, dear = "all", body, table, body2, table2,
+                  attachment) {
   # NB: Requires stringr, RDCOMClient
 
   # Creating an email
@@ -28,7 +31,8 @@ email <- function(To, Cc, subject, dear = "all", body, table, body2, table2, att
   outMail <- OutApp$CreateItem(0)
 
   # Getting the signature
-  # If there are no signatures or multiple, no signature will be pulled into the email
+  # If there are no signatures or multiple, no signature will be pulled into
+  # the email
   outMail$GetInspector()
   signature <- outMail[["HTMLBody"]]
 
@@ -49,8 +53,9 @@ email <- function(To, Cc, subject, dear = "all", body, table, body2, table2, att
   }
 
   # Email body
-  # If body not specified, will be left blank. User should use <p> in their string to split into paragraphs.
-  if(!missing(body) & missing(table) & missing(body2) & missing(table2)){
+  # If body not specified, will be left blank. User should use <p> in their
+  # string to split into paragraphs.
+  if(!missing(body) & missing(table) & missing(body2) & missing(table2)) {
     outMail[["HTMLBody"]] <- paste0('<p>',
                                     stringr::str_replace("Dear X,", "X", dear),
                                     '</p>',
@@ -61,7 +66,7 @@ email <- function(To, Cc, subject, dear = "all", body, table, body2, table2, att
     )
   }
 
-  if(!missing(body) & !missing(table) & missing(body2) & missing(table2)){
+  if(!missing(body) & !missing(table) & missing(body2) & missing(table2)) {
     outMail[["HTMLBody"]] <- paste0('<p>',
                                     stringr::str_replace("Dear X,", "X", dear),
                                     '</p>',
@@ -74,7 +79,7 @@ email <- function(To, Cc, subject, dear = "all", body, table, body2, table2, att
     )
   }
 
-  if(!missing(body) & missing(table) & !missing(body2) & missing(table2)){
+  if(!missing(body) & missing(table) & !missing(body2) & missing(table2)) {
     outMail[["HTMLBody"]] <- paste0('<p>',
                                     stringr::str_replace("Dear X,", "X", dear),
                                     '</p>',
@@ -87,7 +92,7 @@ email <- function(To, Cc, subject, dear = "all", body, table, body2, table2, att
     )
   }
 
-  if(!missing(body) & !missing(table) & !missing(body2) & missing(table2)){
+  if(!missing(body) & !missing(table) & !missing(body2) & missing(table2)) {
     outMail[["HTMLBody"]] <- paste0('<p>',
                                     stringr::str_replace("Dear X,", "X", dear),
                                     '</p>',
@@ -102,7 +107,7 @@ email <- function(To, Cc, subject, dear = "all", body, table, body2, table2, att
     )
   }
 
-  if(!missing(body) & !missing(table) & !missing(body2) & !missing(table2)){
+  if(!missing(body) & !missing(table) & !missing(body2) & !missing(table2)) {
     outMail[["HTMLBody"]] <- paste0('<p>',
                                     stringr::str_replace("Dear X,", "X", dear),
                                     '</p>',
@@ -120,7 +125,8 @@ email <- function(To, Cc, subject, dear = "all", body, table, body2, table2, att
   }
   # Email attachments
   # If attachment not specified, will be left blank.
-  # If R cannot find attachment, process is stopped and user asked to check file exists and filename is correct. user has to use / not \ in filename.
+  # If R cannot find attachment, process is stopped and user asked to check file
+  # exists and filename is correct. user has to use / not \ in filename.
   if(!missing(attachment)){
 
     if(file.exists(attachment)){

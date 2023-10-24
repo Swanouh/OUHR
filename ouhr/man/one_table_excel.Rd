@@ -20,23 +20,31 @@ one_table_excel(
 
 \item{data}{A dataframe.}
 
-\item{filename}{A string containing desired filepath and name using \code{/} instead of \verb{\\}.}
+\item{filename}{A string containing desired filepath and name using \code{/}
+instead of \verb{\\}.}
 
-\item{password}{A string containing desired password. If omitted, no password is assigned.}
+\item{password}{A string containing desired password. If omitted, no password
+is assigned.}
 
-\item{colNames}{Boolean to say whether column names from the dataframe should be used. Defaults to \code{TRUE}.}
+\item{colNames}{Boolean to say whether column names from the dataframe should
+be used. Defaults to \code{TRUE}.}
 
-\item{table_position}{A vector of coordinates of starting column and starting row. Defaults to column \code{1}, row \code{1}.}
+\item{table_position}{A vector of coordinates of starting column and starting
+row. Defaults to column \code{1}, row \code{1}.}
 
-\item{column_widths}{A vector of the desired column widths. Defaults to "\code{auto}".}
+\item{column_widths}{A vector of the desired column widths. Defaults to
+"\code{auto}".}
 
-\item{columns}{A vector of the column numbers to apply the specified widths too. Defaults to all columns.}
+\item{columns}{A vector of the column numbers to apply the specified widths
+too. Defaults to all columns.}
 }
 \value{
-An Excel workbook with one table saved with filename and password provided.
+An Excel workbook with one table saved with filename and password
+provided.
 }
 \description{
-Creating an Excel workbook with only one table and saving in desired location with desired filename. Option to add a password.
+Creating an Excel workbook with only one table and saving in desired location
+with desired filename. Option to add a password.
 }
 \examples{
 one_table_excel(data = cars, filename = "C:/example.xlsx",
