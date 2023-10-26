@@ -7,13 +7,17 @@
 append_sql(data, sql_table, connection, chunksize = 100)
 }
 \arguments{
-\item{data}{The dataframe you want to append to SQL.}
+\item{data}{The dataframe you want to append to SQL. \code{data} does not need to
+have all the columns that are in \code{sql_table}, but column names must match.}
 
-\item{sql_table}{The SQL table you wish to append to. For example, Info.Performance.Perf_Data.}
+\item{sql_table}{The SQL table you wish to append to. For example,
+Info.Performance.Perf_Data.}
 
-\item{connection}{The SQL connection. For example, connection_WH or connection_OP.}
+\item{connection}{The SQL connection. For example, connection_WH or
+connection_OP.}
 
-\item{chunksize}{Default is 100. This is the number of rows to append at a time. Recommend not changing unless absolutely necessary.}
+\item{chunksize}{Default is 100. This is the number of rows to append at a
+time. Recommend not changing unless absolutely necessary.}
 }
 \value{
 Rows appended to SQL.

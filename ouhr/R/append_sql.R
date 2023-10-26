@@ -2,10 +2,14 @@
 #'
 #' Appending a dataframe to specified SQL table.
 #'
-#' @param data The dataframe you want to append to SQL.
-#' @param sql_table The SQL table you wish to append to. For example, Info.Performance.Perf_Data.
-#' @param connection The SQL connection. For example, connection_WH or connection_OP.
-#' @param chunksize Default is 100. This is the number of rows to append at a time. Recommend not changing unless absolutely necessary.
+#' @param data The dataframe you want to append to SQL. `data` does not need to
+#' have all the columns that are in `sql_table`, but column names must match.
+#' @param sql_table The SQL table you wish to append to. For example,
+#' Info.Performance.Perf_Data.
+#' @param connection The SQL connection. For example, connection_WH or
+#' connection_OP.
+#' @param chunksize Default is 100. This is the number of rows to append at a
+#' time. Recommend not changing unless absolutely necessary.
 #'
 #' @return Rows appended to SQL.
 #' @export
