@@ -5,9 +5,9 @@
 #'
 #' @param data The dataframe you want to compare to SQL.
 #' @param sql_table The SQL table you wish to compare to. For example,
-#' Info.Performance.Perf_Data.
-#' @param connection The SQL connection. For example, connection_WH or
-#' connection_OP.
+#' `"Info.Performance.Perf_Data"`.
+#' @param connection The SQL connection. For example, `connection_WH` or
+#' `connection_OP`.
 #' @param filename The filename for the Excel to output to.
 #'
 #' @return An Excel file.

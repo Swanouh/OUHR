@@ -10,10 +10,10 @@ unmatched_names(data, sql_table, connection, filename)
 \item{data}{The dataframe you want to compare to SQL.}
 
 \item{sql_table}{The SQL table you wish to compare to. For example,
-Info.Performance.Perf_Data.}
+\code{"Info.Performance.Perf_Data"}.}
 
-\item{connection}{The SQL connection. For example, connection_WH or
-connection_OP.}
+\item{connection}{The SQL connection. For example, \code{connection_WH} or
+\code{connection_OP}.}
 
 \item{filename}{The filename for the Excel to output to.}
 }

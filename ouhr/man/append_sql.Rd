@@ -11,12 +11,12 @@ append_sql(data, sql_table, connection, chunksize = 100)
 have all the columns that are in \code{sql_table}, but column names must match.}
 
 \item{sql_table}{The SQL table you wish to append to. For example,
-Info.Performance.Perf_Data.}
+\code{"Info.Performance.Perf_Data"}.}
 
-\item{connection}{The SQL connection. For example, connection_WH or
-connection_OP.}
+\item{connection}{The SQL connection. For example, \code{connection_WH} or
+\code{connection_OP}.}
 
-\item{chunksize}{Default is 100. This is the number of rows to append at a
+\item{chunksize}{Default is \code{100}. This is the number of rows to append at a
 time. Recommend not changing unless absolutely necessary.}
 }
 \value{

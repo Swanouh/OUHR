@@ -10,7 +10,7 @@ match_data(data, sql_table, connection, matched_names, missing_columns = FALSE)
 \item{data}{The dataframe you want to tidy before appending to SQL.}
 
 \item{sql_table}{The SQL table you wish to compare to. For example,
-\code{Info.Performance.Perf_Data}.}
+\code{"Info.Performance.Perf_Data"}.}
 
 \item{connection}{The SQL connection. For example, \code{connection_WH} or
 \code{connection_OP}.}
@@ -23,7 +23,7 @@ need to be given.}
 
 \item{missing_columns}{Default is \code{FALSE}. If set to \code{TRUE}, R will compare
 the columns in \code{data} against the column names in \code{sql_table} and create new
-\code{NULL} ' columns for the missing columns.}
+\code{NULL} columns for the missing columns.}
 }
 \value{
 A dataframe (mostly) ready to append to SQL. Further modifications

@@ -5,7 +5,7 @@
 #'
 #' @param data The dataframe you want to tidy before appending to SQL.
 #' @param sql_table The SQL table you wish to compare to. For example,
-#' `Info.Performance.Perf_Data`.
+#' `"Info.Performance.Perf_Data"`.
 #' @param connection The SQL connection. For example, `connection_WH` or
 #' `connection_OP`.
 #' @param matched_names A dataframe with 2 rows only to show the mapping of
@@ -15,7 +15,7 @@
 #' need to be given.
 #' @param missing_columns Default is `FALSE`. If set to `TRUE`, R will compare
 #' the columns in `data` against the column names in `sql_table` and create new
-#' `NULL` ' columns for the missing columns.
+#' `NULL` columns for the missing columns.
 #'
 #' @return A dataframe (mostly) ready to append to SQL. Further modifications
 #' can be made if necessary.
