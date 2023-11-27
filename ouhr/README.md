@@ -17,8 +17,173 @@ You can install the development version of ouhr like so:
 
 ``` r
 devtools::install_github("AnyaJade/OUHR/ouhr")
-#> Skipping install of 'ouhr' from a github remote, the SHA1 (fba40119) has not changed since last install.
-#>   Use `force = TRUE` to force installation
+#> Downloading GitHub repo AnyaJade/OUHR@HEAD
+#> xfun      (0.40   -> 0.41  ) [CRAN]
+#> vctrs     (0.6.1  -> 0.6.4 ) [CRAN]
+#> stringi   (1.7.12 -> 1.8.2 ) [CRAN]
+#> rlang     (1.1.0  -> 1.1.2 ) [CRAN]
+#> lifecycle (1.0.3  -> 1.0.4 ) [CRAN]
+#> cli       (3.6.0  -> 3.6.1 ) [CRAN]
+#> evaluate  (0.22   -> 0.23  ) [CRAN]
+#> digest    (0.6.31 -> 0.6.33) [CRAN]
+#> htmltools (0.5.4  -> 0.5.7 ) [CRAN]
+#> fs        (1.6.1  -> 1.6.3 ) [CRAN]
+#> cachem    (1.0.6  -> 1.0.8 ) [CRAN]
+#> utf8      (1.2.3  -> 1.2.4 ) [CRAN]
+#> fansi     (1.0.4  -> 1.0.5 ) [CRAN]
+#> tinytex   (0.48   -> 0.49  ) [CRAN]
+#> stringr   (1.5.0  -> 1.5.1 ) [CRAN]
+#> bslib     (0.5.1  -> 0.6.0 ) [CRAN]
+#> Rcpp      (1.0.10 -> 1.0.11) [CRAN]
+#> odbc      (1.3.4  -> 1.3.5 ) [CRAN]
+#> lubridate (1.9.2  -> 1.9.3 ) [CRAN]
+#> dplyr     (1.1.3  -> 1.1.4 ) [CRAN]
+#> Skipping 1 packages not available: RDCOMClient
+#> Installing 20 packages: xfun, vctrs, stringi, rlang, lifecycle, cli, evaluate, digest, htmltools, fs, cachem, utf8, fansi, tinytex, stringr, bslib, Rcpp, odbc, lubridate, dplyr
+#> Installing packages into 'C:/Users/Anya.Ferguson/AppData/Local/R/win-library/4.2'
+#> (as 'lib' is unspecified)
+#> package 'xfun' successfully unpacked and MD5 sums checked
+#> Warning: cannot remove prior installation of package 'xfun'
+#> Warning in file.copy(savedcopy, lib, recursive = TRUE): problem copying
+#> C:\Users\Anya.Ferguson\AppData\Local\R\win-library\4.2\00LOCK\xfun\libs\x64\xfun.dll
+#> to
+#> C:\Users\Anya.Ferguson\AppData\Local\R\win-library\4.2\xfun\libs\x64\xfun.dll:
+#> Permission denied
+#> Warning: restored 'xfun'
+#> package 'vctrs' successfully unpacked and MD5 sums checked
+#> Warning: cannot remove prior installation of package 'vctrs'
+#> Warning in file.copy(savedcopy, lib, recursive = TRUE): problem copying
+#> C:\Users\Anya.Ferguson\AppData\Local\R\win-library\4.2\00LOCK\vctrs\libs\x64\vctrs.dll
+#> to
+#> C:\Users\Anya.Ferguson\AppData\Local\R\win-library\4.2\vctrs\libs\x64\vctrs.dll:
+#> Permission denied
+#> Warning: restored 'vctrs'
+#> package 'stringi' successfully unpacked and MD5 sums checked
+#> Warning: cannot remove prior installation of package 'stringi'
+#> Warning in file.copy(savedcopy, lib, recursive = TRUE): problem copying
+#> C:\Users\Anya.Ferguson\AppData\Local\R\win-library\4.2\00LOCK\stringi\libs\icudt69l.dat
+#> to
+#> C:\Users\Anya.Ferguson\AppData\Local\R\win-library\4.2\stringi\libs\icudt69l.dat:
+#> Invalid argument
+#> Warning in file.copy(savedcopy, lib, recursive = TRUE): problem copying
+#> C:\Users\Anya.Ferguson\AppData\Local\R\win-library\4.2\00LOCK\stringi\libs\x64\stringi.dll
+#> to
+#> C:\Users\Anya.Ferguson\AppData\Local\R\win-library\4.2\stringi\libs\x64\stringi.dll:
+#> Permission denied
+#> Warning: restored 'stringi'
+#> package 'rlang' successfully unpacked and MD5 sums checked
+#> Warning: cannot remove prior installation of package 'rlang'
+#> Warning in file.copy(savedcopy, lib, recursive = TRUE): problem copying
+#> C:\Users\Anya.Ferguson\AppData\Local\R\win-library\4.2\00LOCK\rlang\libs\x64\rlang.dll
+#> to
+#> C:\Users\Anya.Ferguson\AppData\Local\R\win-library\4.2\rlang\libs\x64\rlang.dll:
+#> Permission denied
+#> Warning: restored 'rlang'
+#> package 'lifecycle' successfully unpacked and MD5 sums checked
+#> package 'cli' successfully unpacked and MD5 sums checked
+#> Warning: cannot remove prior installation of package 'cli'
+#> Warning in file.copy(savedcopy, lib, recursive = TRUE): problem copying
+#> C:\Users\Anya.Ferguson\AppData\Local\R\win-library\4.2\00LOCK\cli\libs\x64\cli.dll
+#> to C:\Users\Anya.Ferguson\AppData\Local\R\win-library\4.2\cli\libs\x64\cli.dll:
+#> Permission denied
+#> Warning: restored 'cli'
+#> package 'evaluate' successfully unpacked and MD5 sums checked
+#> package 'digest' successfully unpacked and MD5 sums checked
+#> Warning: cannot remove prior installation of package 'digest'
+#> Warning in file.copy(savedcopy, lib, recursive = TRUE): problem copying
+#> C:\Users\Anya.Ferguson\AppData\Local\R\win-library\4.2\00LOCK\digest\libs\x64\digest.dll
+#> to
+#> C:\Users\Anya.Ferguson\AppData\Local\R\win-library\4.2\digest\libs\x64\digest.dll:
+#> Permission denied
+#> Warning: restored 'digest'
+#> package 'htmltools' successfully unpacked and MD5 sums checked
+#> Warning: cannot remove prior installation of package 'htmltools'
+#> Warning in file.copy(savedcopy, lib, recursive = TRUE): problem copying
+#> C:\Users\Anya.Ferguson\AppData\Local\R\win-library\4.2\00LOCK\htmltools\libs\x64\htmltools.dll
+#> to
+#> C:\Users\Anya.Ferguson\AppData\Local\R\win-library\4.2\htmltools\libs\x64\htmltools.dll:
+#> Permission denied
+#> Warning: restored 'htmltools'
+#> package 'fs' successfully unpacked and MD5 sums checked
+#> Warning: cannot remove prior installation of package 'fs'
+#> Warning in file.copy(savedcopy, lib, recursive = TRUE): problem copying
+#> C:\Users\Anya.Ferguson\AppData\Local\R\win-library\4.2\00LOCK\fs\libs\x64\fs.dll
+#> to C:\Users\Anya.Ferguson\AppData\Local\R\win-library\4.2\fs\libs\x64\fs.dll:
+#> Permission denied
+#> Warning: restored 'fs'
+#> package 'cachem' successfully unpacked and MD5 sums checked
+#> Warning: cannot remove prior installation of package 'cachem'
+#> Warning in file.copy(savedcopy, lib, recursive = TRUE): problem copying
+#> C:\Users\Anya.Ferguson\AppData\Local\R\win-library\4.2\00LOCK\cachem\libs\x64\cachem.dll
+#> to
+#> C:\Users\Anya.Ferguson\AppData\Local\R\win-library\4.2\cachem\libs\x64\cachem.dll:
+#> Permission denied
+#> Warning: restored 'cachem'
+#> package 'utf8' successfully unpacked and MD5 sums checked
+#> Warning: cannot remove prior installation of package 'utf8'
+#> Warning in file.copy(savedcopy, lib, recursive = TRUE): problem copying
+#> C:\Users\Anya.Ferguson\AppData\Local\R\win-library\4.2\00LOCK\utf8\libs\x64\utf8.dll
+#> to
+#> C:\Users\Anya.Ferguson\AppData\Local\R\win-library\4.2\utf8\libs\x64\utf8.dll:
+#> Permission denied
+#> Warning: restored 'utf8'
+#> package 'fansi' successfully unpacked and MD5 sums checked
+#> Warning: cannot remove prior installation of package 'fansi'
+#> Warning in file.copy(savedcopy, lib, recursive = TRUE): problem copying
+#> C:\Users\Anya.Ferguson\AppData\Local\R\win-library\4.2\00LOCK\fansi\libs\x64\fansi.dll
+#> to
+#> C:\Users\Anya.Ferguson\AppData\Local\R\win-library\4.2\fansi\libs\x64\fansi.dll:
+#> Permission denied
+#> Warning: restored 'fansi'
+#> package 'tinytex' successfully unpacked and MD5 sums checked
+#> package 'stringr' successfully unpacked and MD5 sums checked
+#> package 'bslib' successfully unpacked and MD5 sums checked
+#> package 'Rcpp' successfully unpacked and MD5 sums checked
+#> Warning: cannot remove prior installation of package 'Rcpp'
+#> Warning in file.copy(savedcopy, lib, recursive = TRUE): problem copying
+#> C:\Users\Anya.Ferguson\AppData\Local\R\win-library\4.2\00LOCK\Rcpp\libs\x64\Rcpp.dll
+#> to
+#> C:\Users\Anya.Ferguson\AppData\Local\R\win-library\4.2\Rcpp\libs\x64\Rcpp.dll:
+#> Permission denied
+#> Warning: restored 'Rcpp'
+#> package 'odbc' successfully unpacked and MD5 sums checked
+#> Warning: cannot remove prior installation of package 'odbc'
+#> Warning in file.copy(savedcopy, lib, recursive = TRUE): problem copying
+#> C:\Users\Anya.Ferguson\AppData\Local\R\win-library\4.2\00LOCK\odbc\libs\x64\odbc.dll
+#> to
+#> C:\Users\Anya.Ferguson\AppData\Local\R\win-library\4.2\odbc\libs\x64\odbc.dll:
+#> Permission denied
+#> Warning: restored 'odbc'
+#> package 'lubridate' successfully unpacked and MD5 sums checked
+#> Warning: cannot remove prior installation of package 'lubridate'
+#> Warning in file.copy(savedcopy, lib, recursive = TRUE): problem copying
+#> C:\Users\Anya.Ferguson\AppData\Local\R\win-library\4.2\00LOCK\lubridate\libs\x64\lubridate.dll
+#> to
+#> C:\Users\Anya.Ferguson\AppData\Local\R\win-library\4.2\lubridate\libs\x64\lubridate.dll:
+#> Permission denied
+#> Warning: restored 'lubridate'
+#> package 'dplyr' successfully unpacked and MD5 sums checked
+#> Warning: cannot remove prior installation of package 'dplyr'
+#> Warning in file.copy(savedcopy, lib, recursive = TRUE): problem copying
+#> C:\Users\Anya.Ferguson\AppData\Local\R\win-library\4.2\00LOCK\dplyr\libs\x64\dplyr.dll
+#> to
+#> C:\Users\Anya.Ferguson\AppData\Local\R\win-library\4.2\dplyr\libs\x64\dplyr.dll:
+#> Permission denied
+#> Warning: restored 'dplyr'
+#> 
+#> The downloaded binary packages are in
+#>  C:\Users\Anya.Ferguson\AppData\Local\Temp\Rtmpwd5yve\downloaded_packages
+#> ── R CMD build ─────────────────────────────────────────────────────────────────
+#>          checking for file 'C:\Users\Anya.Ferguson\AppData\Local\Temp\Rtmpwd5yve\remotes43441a391e5f\AnyaJade-OUHR-0440e98\ouhr/DESCRIPTION' ...     checking for file 'C:\Users\Anya.Ferguson\AppData\Local\Temp\Rtmpwd5yve\remotes43441a391e5f\AnyaJade-OUHR-0440e98\ouhr/DESCRIPTION' ...   ✔  checking for file 'C:\Users\Anya.Ferguson\AppData\Local\Temp\Rtmpwd5yve\remotes43441a391e5f\AnyaJade-OUHR-0440e98\ouhr/DESCRIPTION' (1.5s)
+#>       ─  preparing 'ouhr': (414ms)
+#>    checking DESCRIPTION meta-information ...  ✔  checking DESCRIPTION meta-information
+#>       ─  checking for LF line-endings in source and make files and shell scripts
+#>   ─  checking for empty or unneeded directories
+#>   ─  building 'ouhr_0.3.1.tar.gz'
+#>      
+#> 
+#> Installing package into 'C:/Users/Anya.Ferguson/AppData/Local/R/win-library/4.2'
+#> (as 'lib' is unspecified)
 ```
 
 ## Example
@@ -40,201 +205,38 @@ what they do.
 
 ## Date Manipulations
 
-``` r
-# A function to find the financial year of a given date
-financial_year(as.Date("2023-03-28"))
-#> [1] "2022-2023"
-```
-
-``` r
-# A function to find the first of the month of a given date
-first_of_month(as.Date("2023-03-28"))
-#> [1] "2023-03-01"
-```
-
-``` r
-# A function to find the date of the last Sunday before a given date
-last_sunday(as.Date("2023-03-28"))
-#> [1] "2023-03-26"
-```
-
-``` r
-# A function to find the previous month of a given date
-previous_month(as.Date("2023-03-28"))
-#> [1] "2023-02-28"
-```
-
-``` r
-# A function to create a string of the month and year where month can be either the full name, abbreviated or a number in MM format
-monthyear(as.Date("2023-03-28"), "abb")
-#> [1] "Mar 2023"
-monthyear(as.Date("2023-03-28"), "full")
-#> [1] "March 2023"
-monthyear(as.Date("2023-03-28"), "num")
-#> [1] "03 2023"
-```
-
-``` r
-# A function to convert a month into "MM" format
-month_zero(as.Date("2023-03-28"))
-#> [1] "03"
-```
+- `financial_month()` for getting the financial month from a date.
+- `financial_year()` for getting the Financial Year from a date.
+- `first_of_month()` for getting the First of the Month from a date.
+- `last_sunday()` for getting the Last Sunday from a date.
+- `monthyear()` for getting the Month and Year from a date in 1 of 3
+  formats.
+- `month_zero()` for adding a zero to month.
+- `previous_month()` for Previous Month from a date.
 
 ## Email
 
-``` r
-# A function to create an email
-email(To = "anya.ferguson@ouh.nhs.uk; EDandSupportServicesInformationTeam@oxnet.nhs.uk",
-      Cc = "example@ouh.nhs.uk",
-      subject = "Testing email function from OUHR package",
-      body = "Testing the email function from OUHR package. <p> Please ignore this email."
-      )
-#> NULL
-```
-
-``` r
-library(tidyverse)
-#> Warning: package 'tidyverse' was built under R version 4.2.3
-#> Warning: package 'tibble' was built under R version 4.2.3
-#> Warning: package 'dplyr' was built under R version 4.2.3
-#> Warning: package 'lubridate' was built under R version 4.2.3
-#> ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-#> ✔ dplyr     1.1.2     ✔ readr     2.1.4
-#> ✔ forcats   1.0.0     ✔ stringr   1.5.0
-#> ✔ ggplot2   3.4.1     ✔ tibble    3.2.1
-#> ✔ lubridate 1.9.2     ✔ tidyr     1.3.0
-#> ✔ purrr     1.0.1     
-#> ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-#> ✖ dplyr::filter() masks stats::filter()
-#> ✖ dplyr::lag()    masks stats::lag()
-#> ℹ Use the ]8;;http://conflicted.r-lib.org/conflicted package]8;; to force all conflicts to become errors
-library(kableExtra)
-#> Warning: package 'kableExtra' was built under R version 4.2.3
-#> 
-#> Attaching package: 'kableExtra'
-#> 
-#> The following object is masked from 'package:dplyr':
-#> 
-#>     group_rows
-
-# Can also add a table to an email body, or an attachment
-cars_table <- cars %>% 
-  kable(booktabs = TRUE) %>% 
-  kable_styling(full_width = F)
-
-email(To = "anya.ferguson@ouh.nhs.uk; EDandSupportServicesInformationTeam@oxnet.nhs.uk",
-      body = "Testing the email function from OUHR package.",
-      table = cars_table,
-      body2 = "The table above shows the cars dataset."
-      )
-#> NULL
-```
-
-``` r
-# A function to create 1 of 4 emails specifically for information requests
-email_info_request(type = "password",
-                   To = "anya.ferguson@ouh.nhs.uk ",
-                   dear = "Anya",
-                   password = "test"
-                   )
-#> NULL
-```
+- `email()` for creating an Email.
+- `email_info_request()` for creating emails for info requests.
 
 ## Excel
 
-``` r
-# A function to save excel, with option to add a password
-wb <- openxlsx::createWorkbook()
+- `delete_all_excel()` for deleting existing data from an Excel sheet.
+- `group_table_excel()` for adding one sheet and table per group to
+  Excel.
+- `one_table_excel()` for creating and Excel file with one table.
+- `plot_excel()` for adding a plot to Excel.
+- `save_excel()` for saving an Excel File with optional password.
 
-openxlsx::addWorksheet(wb, "example")
+## SQL
 
-save_excel(wb = wb, 
-           filename = "C:/examplewithpassword.xlsx", 
-           password = "test"
-           )
-```
-
-``` r
-# A function to add a plot to excel
-plot1 <- plot(cars)
-```
-
-<img src="man/figures/README-plot in excel-1.png" width="100%" />
-
-``` r
-
-wb1 <- openxlsx::createWorkbook()
-
-openxlsx::addWorksheet(wb1, "example")
-
-plot_excel(wb = wb1,
-           sheetname = "example", 
-           plot = plot1,
-           plot_position = c(5, 3),
-           plot_width = 10
-           )
-#> NULL
-
-save_excel(wb = wb1, 
-           filename = "C:/exampleplot.xlsx"
-           )
-```
-
-``` r
-# A function to create an excel file with data saved in only one table in only one sheet
-one_table_excel(sheetname = "data", 
-                data = cars, 
-                filename = "C:/exampletable.xlsx", 
-                column_widths = c(5, 8), 
-                columns = c(1, 2)
-                )
-```
-
-``` r
-# A function to add one sheet per group in an excel sheet, each with one table. 
-wb <- openxlsx::createWorkbook()
-
-data <- cars %>% mutate("speed_category" = ifelse(speed <15, "Less than 15", "Greater than 15"))
-
-group_table_excel(wb = wb1, data = data, group = speed_category, range = c("Less than 15", "Greater than 15"))
-
-save_excel(wb = wb, 
-           filename = "C:/examplegroup.xlsx"
-           )
-#> Warning: Workbook does not contain any worksheets. A worksheet will be added.
-```
-
-``` r
-# A function to delete all data from a start row and start col to end of excel sheet
-one_table_excel(data = cars, filename = "C:/example.xlsx")
-
-wb <- openxlsx::loadWorkbook("C:/example.xlsx")
-
-delete_all_excel(template = "C:/example.xlsx", wb = wb, sheet = "Sheet1", row_start = 5)
-
-save_excel(wb = wb, filename = "C:/example.xlsx")
-```
+- `append_sql()` for appending data to SQL.
+- `match_data()` for matching data.
+- `prescriptions()` for writing a prescriptions SQL query.
+- `read_sql()` for reading .sql files.
+- `unmatched_names()` for finding unmatched names.
 
 ## Other
 
-``` r
-# A function to create a string of upper/lower case letters and numbers of a desired length, with option to specify a seed.
-random_password(seed = 1, length = 4)
-#> [1] "GNZu"
-```
-
-``` r
-# A function to create a base SQL query that searches columns CATALOG_CD_DISPLAY, ORDER_MNEMONIC and ORDERED_AS_MNEMONIC in TDWH_ORH.WareHouse.ODS.d_PrescriptionOrders for all provided drugs in a specified date range
-prescriptions(drugs = c("Berinert", "Cinryze", "Orladeyo"), 
-              startdate = "2023-06-01", 
-              enddate = "2023-06-30"
-              )
-#> [1] "SELECT * FROM TDWH_ORH.WareHouse.ODS.d_PrescriptionOrders AS PO WHERE PO.OrderPlacedDateTime BETWEEN '2023-06-01' AND '2023-06-30' AND (PO.CATALOG_CD_DISPLAY LIKE '%Berinert%' OR PO.ORDER_MNEMONIC LIKE '%Berinert%' OR PO.ORDERED_AS_MNEMONIC LIKE '%Berinert%' OR PO.CATALOG_CD_DISPLAY LIKE '%Cinryze%' OR PO.ORDER_MNEMONIC LIKE '%Cinryze%' OR PO.ORDERED_AS_MNEMONIC LIKE '%Cinryze%' OR PO.CATALOG_CD_DISPLAY LIKE '%Orladeyo%' OR PO.ORDER_MNEMONIC LIKE '%Orladeyo%' OR PO.ORDERED_AS_MNEMONIC LIKE '%Orladeyo%')"
-```
-
-``` r
-# A function to read .sql files into R. 
-filename <- "C:/SVN/R/Testing read_sql function.sql"
-read_sql(filename)
-#> [1] " /* Adding in a comment to test that the read_sql function doesn't comment out the rest of this test script */ SELECT TOP 10 *  FROM DataMarts.APC.APCSpell  /* Adding in a comment to test that the read_sql function doesn't comment out the rest of this test script */ WHERE CAST(DischargeDateTime AS DATE) = '2023-07-31'"
-```
+- `random_password()` for generating random strings.
+- `wrap_up()` for wrap up of scripts.

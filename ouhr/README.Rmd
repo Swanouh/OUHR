@@ -43,162 +43,34 @@ first_of_month(as.Date("2023-03-28"))
 Below is a list of all the functions currently in ouhr and a summary of what they do.
 
 ## Date Manipulations
-
-```{r financial year}
-# A function to find the financial year of a given date
-financial_year(as.Date("2023-03-28"))
-```
-
-```{r first of the month}
-# A function to find the first of the month of a given date
-first_of_month(as.Date("2023-03-28"))
-```
-
-```{r last sunday}
-# A function to find the date of the last Sunday before a given date
-last_sunday(as.Date("2023-03-28"))
-```
-
-```{r previous month}
-# A function to find the previous month of a given date
-previous_month(as.Date("2023-03-28"))
-```
-
-```{r month year}
-# A function to create a string of the month and year where month can be either the full name, abbreviated or a number in MM format
-monthyear(as.Date("2023-03-28"), "abb")
-monthyear(as.Date("2023-03-28"), "full")
-monthyear(as.Date("2023-03-28"), "num")
-```
-
-```{r month zero}
-# A function to convert a month into "MM" format
-month_zero(as.Date("2023-03-28"))
-```
++ `financial_month()` for getting the financial month from a date.
++ `financial_year()` for getting the	Financial Year from a date.
++ `first_of_month()` for getting the	First of the Month from a date.
++ `last_sunday()` for getting the	Last Sunday from a date.
++ `monthyear()` for getting the Month and Year from a date in 1 of 3 formats.
++ `month_zero()` for adding a zero to month.
++ `previous_month()` for 	Previous Month from a date.
 
 ## Email
-
-```{r email}
-# A function to create an email
-email(To = "anya.ferguson@ouh.nhs.uk; EDandSupportServicesInformationTeam@oxnet.nhs.uk",
-      Cc = "example@ouh.nhs.uk",
-      subject = "Testing email function from OUHR package",
-      body = "Testing the email function from OUHR package. <p> Please ignore this email."
-      )
-```
-
-```{r email with table}
-library(tidyverse)
-library(kableExtra)
-
-# Can also add a table to an email body, or an attachment
-cars_table <- cars %>% 
-  kable(booktabs = TRUE) %>% 
-  kable_styling(full_width = F)
-
-email(To = "anya.ferguson@ouh.nhs.uk; EDandSupportServicesInformationTeam@oxnet.nhs.uk",
-      body = "Testing the email function from OUHR package.",
-      table = cars_table,
-      body2 = "The table above shows the cars dataset."
-      )
-```
-
-```{r email for information requests}
-# A function to create 1 of 4 emails specifically for information requests
-email_info_request(type = "password",
-                   To = "anya.ferguson@ouh.nhs.uk ",
-                   dear = "Anya",
-                   password = "test"
-                   )
-```
++ `email()` for creating an Email.
++ `email_info_request()` for creating emails for info requests.
 
 ## Excel
-```{r saving excel}
-# A function to save excel, with option to add a password
-wb <- openxlsx::createWorkbook()
++ `delete_all_excel()` for deleting existing data from an Excel sheet.
++ `group_table_excel()` for adding one sheet and table per group to Excel.
++ `one_table_excel()` for creating and Excel file with one table.
++ `plot_excel()` for adding a plot to Excel.
++ `save_excel()` for saving an Excel File with optional password.
 
-openxlsx::addWorksheet(wb, "example")
-
-save_excel(wb = wb, 
-           filename = "C:/examplewithpassword.xlsx", 
-           password = "test"
-           )
-```
-
-```{r plot in excel}
-# A function to add a plot to excel
-plot1 <- plot(cars)
-
-wb1 <- openxlsx::createWorkbook()
-
-openxlsx::addWorksheet(wb1, "example")
-
-plot_excel(wb = wb1,
-           sheetname = "example", 
-           plot = plot1,
-           plot_position = c(5, 3),
-           plot_width = 10
-           )
-
-save_excel(wb = wb1, 
-           filename = "C:/exampleplot.xlsx"
-           )
-```
-
-```{r one table only in excel}
-# A function to create an excel file with data saved in only one table in only one sheet
-one_table_excel(sheetname = "data", 
-                data = cars, 
-                filename = "C:/exampletable.xlsx", 
-                column_widths = c(5, 8), 
-                columns = c(1, 2)
-                )
-```
-
-```{r one table per group in excel}
-# A function to add one sheet per group in an excel sheet, each with one table. 
-wb <- openxlsx::createWorkbook()
-
-data <- cars %>% mutate("speed_category" = ifelse(speed <15, "Less than 15", "Greater than 15"))
-
-group_table_excel(wb = wb1, data = data, group = speed_category, range = c("Less than 15", "Greater than 15"))
-
-save_excel(wb = wb, 
-           filename = "C:/examplegroup.xlsx"
-           )
-```
-
-```{r deleting data from excel}
-# A function to delete all data from a start row and start col to end of excel sheet
-one_table_excel(data = cars, filename = "C:/example.xlsx")
-
-wb <- openxlsx::loadWorkbook("C:/example.xlsx")
-
-delete_all_excel(template = "C:/example.xlsx", wb = wb, sheet = "Sheet1", row_start = 5)
-
-save_excel(wb = wb, filename = "C:/example.xlsx")
-```
-
+## SQL
++ `append_sql()` for appending data to SQL.
++ `match_data()` for matching data.
++ `prescriptions()` for writing a prescriptions SQL query.
++ `read_sql()` for reading .sql files.
++ `unmatched_names()` for finding unmatched names.
 
 ## Other
-```{r random password}
-# A function to create a string of upper/lower case letters and numbers of a desired length, with option to specify a seed.
-random_password(seed = 1, length = 4)
-```
-
-```{r prescriptions}
-# A function to create a base SQL query that searches columns CATALOG_CD_DISPLAY, ORDER_MNEMONIC and ORDERED_AS_MNEMONIC in TDWH_ORH.WareHouse.ODS.d_PrescriptionOrders for all provided drugs in a specified date range
-prescriptions(drugs = c("Berinert", "Cinryze", "Orladeyo"), 
-              startdate = "2023-06-01", 
-              enddate = "2023-06-30"
-              )
-```
-
-```{r reading in .sql files}
-# A function to read .sql files into R. 
-filename <- "C:/SVN/R/Testing read_sql function.sql"
-read_sql(filename)
-```
-
++ `random_password()` for generating random strings.
++ `wrap_up()` for	wrap up of scripts.
 
 
