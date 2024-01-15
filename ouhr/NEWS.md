@@ -1,3 +1,6 @@
+# ouhr 0.3.2
+* Changing `wrap_up` to use `append_sql` instead.
+
 # ouhr 0.3.1
 * Changing `append_sql()` so the column names of `data` wish to append to sql 
 are used instead of the column names of `sql_table`. This will allow for 

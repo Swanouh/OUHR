@@ -38,10 +38,10 @@ wrap_up <- function(){
                     "RScriptName" = title
   )
 
-  DBI::dbAppendTable(conn = connection_WH,
-                     name = DBI::SQL("Info.Adhoc.R_Procedures"),
-                     value = log
-  )
+  append_sql(log,
+             "Info.Adhoc.R_Procedures",
+             connection_WH
+             )
 
   paste("Runtime:",
         hms::round_hms(hms::as_hms(difftime(procedure_end_time,

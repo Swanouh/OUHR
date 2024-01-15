@@ -24,7 +24,7 @@ The goal of ouhr is to provide useful functions for completing routine procedure
 
 You can install the development version of ouhr like so:
 
-``` {r installing OUHR, eval = FALSE}
+``` {r installing OUHR}
 devtools::install_github("AnyaJade/OUHR/ouhr")
 ```
 
